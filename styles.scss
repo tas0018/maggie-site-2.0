@@ -4,5 +4,77 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Poppins" sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+}
+
+// Sass Variables
+$white: #FFF;
+$black: #000;
+
+// Nav Code Starts Here
+// Desktop Nav
+#desktop-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 1rem 2rem;
+}
+
+#desktop-nav .logo,
+#desktop-nav.sticky ul li a {
+  color: $black;
+}
+
+#desktop-nav .logo {
+  position: relative;
+  font-weight: 800;
+  color: $white;
+  text-decoration: none;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6s;
+}
+
+#desktop-nav ul {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+
+#desktop-nav ul li {
+  position: relative;
+  list-style: none;
+}
+
+#desktop-nav ul li a {
+  position: relative;
+  margin: 0 0.6rem;
+  text-decoration: none;
+  color: $white;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: 0.6s;
+}
+
+#hero {
+  display: flex;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 5rem;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  background-color: grey;
+  z-index: 2;
 }

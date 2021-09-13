@@ -4,6 +4,93 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Poppins" sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+}
+
+#desktop-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  padding: 1rem 2rem;
+}
+
+#desktop-nav .logo,
+#desktop-nav.sticky ul li a {
+  color: #000;
+}
+
+#desktop-nav .logo {
+  position: relative;
+  font-weight: 800;
+  color: #FFF;
+  text-decoration: none;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+#desktop-nav ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+}
+
+#desktop-nav ul li {
+  position: relative;
+  list-style: none;
+}
+
+#desktop-nav ul li a {
+  position: relative;
+  margin: 0 0.6rem;
+  text-decoration: none;
+  color: #FFF;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+#hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #FFF;
+  background-color: grey;
+  z-index: 2;
 }
 /*# sourceMappingURL=styles.css.map */
