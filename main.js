@@ -8,13 +8,16 @@ window.addEventListener("scroll", () => {
 let mobileMenu = document.getElementById("menu");
 let mobileBars = document.getElementById("mobile-bars");
 let mobileTimes = document.getElementById("mobile-times");
+let content = document.getElementById("content");
 
 mobileMenu.addEventListener("click", () => {
   if (mobileBars.style.display === "none") {
     mobileBars.style.display = "block";
     mobileTimes.style.display = "none";
+    content.classList.remove("active");
   } else {
     mobileBars.style.display = "none";
     mobileTimes.style.display = "block";
+    content.classList.add("active");
   }
 });

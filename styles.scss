@@ -11,6 +11,8 @@
 // Sass Variables
 $white: #fff;
 $black: #000;
+$rum-purple: #746685;
+$pampas: #f4f4ed;
 
 // Nav Code Starts Here
 // Desktop Nav
@@ -24,6 +26,7 @@ $black: #000;
   align-items: center;
   transition: 0.6s;
   padding: 1rem 2rem;
+  z-index: 100;
 }
 
 #desktop-nav .logo,
@@ -67,7 +70,7 @@ $black: #000;
 }
 
 #mobile-nav {
-  display: flex;
+  display: none;
   position: fixed;
   z-index: 10;
   padding: 2%;
@@ -94,6 +97,13 @@ $black: #000;
   position: relative;
 }
 
+#content {
+  display: flex;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
 #hero {
   display: flex;
   right: 0;
@@ -110,11 +120,141 @@ $black: #000;
   width: 100%;
 }
 
+//Code for the menu
+#content.active {
+  right: 80%;
+}
+
+#side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $white;
+}
+
+#side-menu ul {
+  position: relative;
+  list-style: none;
+  background: #007fff;
+  background: -webkit-linear-gradient(
+    to right,
+    #007fff 14%,
+    #6cb4ee 59%,
+    #00ffff 100%
+  );
+  background: -moz-linear-gradient(
+    to right,
+    #007fff 14%,
+    #6cb4ee 59%,
+    #00ffff 100%
+  );
+  background: linear-gradient(to right, #007fff 14%, #6cb4ee 59%, #00ffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#side-menu ul li {
+  margin: 10% 0;
+  align-items: center;
+  text-align: center;
+}
+
+#side-menu ul li a {
+  text-decoration: none;
+  color: $white;
+  font-size: 3rem;
+}
+
+#hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+#hero .hero-text {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-text h2 {
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 1.3em;
+  text-transform: uppercase;
+}
+
+.hero-text h3 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.3em;
+  text-transform: uppercase;
+}
+
+.hero-text p {
+  font-size: 1.8rem;
+  margin: 0.5rem 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+
+.hero-text a {
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #111;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+
+.hero-text a:hover {
+  letter-spacing: 6px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #61aad8;
+  // background: #9db0c1;
+  mix-blend-mode: overlay;
+}
+
 /*Media Queries*/
 
 /*Index Page Media Queries*/
 @media only screen and (max-width: 600px) {
   #desktop-nav {
     display: none;
+  }
+
+  #mobile-nav {
+    display: flex;
+  }
+
+  .hero-text {
+    padding-top: 5%;
+  }
+
+  .hero-text h2 {
+    font-size: 5rem;
+  }
+
+  .hero-text h3 {
+    font-size: 4rem;
   }
 }
