@@ -4,7 +4,7 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 10px;
 }
 
@@ -35,7 +35,7 @@
 #desktop-nav .logo {
   position: relative;
   font-weight: 800;
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
   font-size: 2rem;
   text-transform: uppercase;
@@ -67,12 +67,44 @@
   position: relative;
   margin: 0 0.6rem;
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
   letter-spacing: 2px;
   font-size: 1.2rem;
   font-weight: 600;
   -webkit-transition: 0.6s;
   transition: 0.6s;
+}
+
+#mobile-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  padding: 2%;
+  top: 0;
+  right: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+#mobile-nav .toggle-menu.bars i {
+  font-size: 4rem;
+  position: relative;
+}
+
+#mobile-nav #mobile-times {
+  display: none;
+}
+
+#mobile-nav .toggle-menu.times i {
+  font-size: 4rem;
+  position: relative;
 }
 
 #hero {
@@ -89,8 +121,19 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #FFF;
+  color: #fff;
   background-color: grey;
   z-index: 2;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+/*Media Queries*/
+/*Index Page Media Queries*/
+@media only screen and (max-width: 600px) {
+  #desktop-nav {
+    display: none;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

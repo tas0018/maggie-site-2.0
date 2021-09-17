@@ -4,12 +4,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 10px;
 }
 
 // Sass Variables
-$white: #FFF;
+$white: #fff;
 $black: #000;
 
 // Nav Code Starts Here
@@ -66,6 +66,34 @@ $black: #000;
   transition: 0.6s;
 }
 
+#mobile-nav {
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  padding: 2%;
+  top: 0;
+  right: 0;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#mobile-nav .toggle-menu.bars i {
+  font-size: 4rem;
+  //right: -50%;
+  position: relative;
+}
+
+#mobile-nav #mobile-times {
+  display: none;
+}
+
+#mobile-nav .toggle-menu.times i {
+  font-size: 4rem;
+  //right: -50%;
+  position: relative;
+}
+
 #hero {
   display: flex;
   right: 0;
@@ -77,4 +105,16 @@ $black: #000;
   color: $white;
   background-color: grey;
   z-index: 2;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+/*Media Queries*/
+
+/*Index Page Media Queries*/
+@media only screen and (max-width: 600px) {
+  #desktop-nav {
+    display: none;
+  }
 }
