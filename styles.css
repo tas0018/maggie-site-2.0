@@ -113,6 +113,8 @@
   position: absolute;
   right: 0;
   width: 100%;
+  -webkit-transition: right 0.5s ease-in-out;
+  transition: right 0.5s ease-in-out;
 }
 
 #hero {
@@ -141,10 +143,14 @@
   right: 80%;
 }
 
+#side-menu.slide {
+  right: 0;
+}
+
 #side-menu {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -100%;
   width: 80%;
   height: 100vh;
   display: -webkit-box;
@@ -157,6 +163,8 @@
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #fff;
+  -webkit-transition: right 0.5s ease-in-out 0.2s;
+  transition: right 0.5s ease-in-out 0.2s;
 }
 
 #side-menu ul {
