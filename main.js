@@ -1,28 +1,33 @@
 //Sticker Nav bar for desktop
-window.addEventListener("scroll", () => {
-  let desktopNav = document.getElementById("desktop-nav");
-  desktopNav.classList.toggle("sticky", window.scrollY > 0);
-});
+// window.addEventListener("scroll", () => {
+//   let desktopNav = document.getElementById("desktop-nav");
+//   desktopNav.classList.toggle("sticky", window.scrollY > 0);
+// });
 
 // On click for mobile nav button
-let mobileMenu = document.getElementById("menu");
-let mobileBars = document.getElementById("mobile-bars");
-let mobileTimes = document.getElementById("mobile-times");
-let content = document.getElementById("content");
-let sideMenu = document.getElementById("side-menu");
+const navSlider = () => {
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('.nav-links');
+  const navLinks = document.querySelectorAll('.nav-links li')
 
-mobileMenu.addEventListener("click", () => {
-  if (mobileBars.style.display === "none") {
-    mobileBars.style.display = "block";
-    mobileTimes.style.display = "none";
-    content.classList.remove("active");
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('nav-active');
 
-    sideMenu.classList.remove("slide");
-  } else {
-    mobileBars.style.display = "none";
-    mobileTimes.style.display = "block";
-    content.classList.add("active");
+    //Animate links
+    navLinks.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = '';
+      }
+      else {
+        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 5 + 0.55}s`
+      }
+    });
+    //burger animation
+    hamburger.classList.toggle('toggle');
 
-    sideMenu.classList.add("slide");
-  }
-});
+  });
+
+}
+
+navSlider();
+s
