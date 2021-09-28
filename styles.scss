@@ -11,15 +11,28 @@
 //Sass Variables
 //Colors
 $white: #fff;
+$black: #111;
+$dark-grey: #212121;
 
 $bold: 500;
 $thin: 300;
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  min-height: 12vh;
+  background-color: transparent;
+  transition: 0.6s;
+  z-index: 1000;
+}
+
+#sticky-nav.sticky {
+  background: $white;
   min-height: 8vh;
-  background-color: blue;
 }
 
 .logo {
@@ -43,12 +56,16 @@ nav {
 }
 
 .nav-links a {
-  color: black;
+  color: $white;
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: $bold;
   font-size: 1.2rem;
-} 
+}
+#sticky-nav.sticky .logo,
+#sticky-nav.sticky ul li a {
+  color: $black;
+}
 
 .hamburger {
   display: none;
@@ -76,7 +93,33 @@ nav {
   transform: rotate(45deg) translate(-7px, -6px);
 }
 
+/*Home page*/
+/*Hero Section*/
+#hero {
+  width: 100%;
+  min-height: 100vh;
+  //display: flex;
+}
 
+.hero-container {
+  height: inherit;
+  width: inherit;
+  position: relative;
+}
+
+.hero-container video {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -5;
+}
+
+#grid {
+  height: 200vh;
+}
 
 // Media Queries
 @media screen and (max-width: 1024px) {
@@ -90,17 +133,23 @@ nav {
     overflow-x: hidden;
   }
 
+  nav {
+    min-height: 8vh;
+    background-color: $dark-grey;
+    z-index: 1000;
+  }
+
   .nav-links {
     position: absolute;
     right: 0px;
-    height: 92vh;
-    top: 8vh;
+    height: 93vh;
+    top: 7vh;
     width: 50%;
-    background-color: red;
+    background-color: $dark-grey;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: translateX(100%);
+    transform: translateX(101%);
     transition: transform 0.5s ease-in;
   }
 
@@ -112,14 +161,22 @@ nav {
     display: block;
   }
 
+  .hamburger div {
+    background-color: $white;
+  }
+
+  .logo {
+    color: $white;
+  }
+
   .nav-active {
-    transform: translateX(0%)
+    transform: translateX(0%);
   }
 }
 
 // Keyframes
 @keyframes navLinkFade {
-  from{
+  from {
     opacity: 0;
     transform: translateX(50px);
   }
