@@ -103,16 +103,20 @@ nav {
 #hero {
   width: 100%;
   min-height: 100vh;
+  position: relative;
+  mix-blend-mode: overlay;
+  background-color: #3eb1fa;
 }
 
 .hero-container {
+  position: relative;
   height: inherit;
   width: inherit;
   position: relative;
 }
 
 .hero-container video {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   width: inherit;
@@ -120,6 +124,39 @@ nav {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -5;
+  opacity: 0.6;
+}
+
+.hero-text-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 5;
+  color: #fff;
+}
+
+.hero-text-content {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
 }
 
 #grid {
