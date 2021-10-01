@@ -66,7 +66,7 @@ nav {
 
 #sticky-nav.sticky .logo,
 #sticky-nav.sticky ul li a {
-  color: #111;
+  color: #353535;
 }
 
 .hamburger {
@@ -163,6 +163,144 @@ nav {
   height: 200vh;
 }
 
+.grid-content {
+  padding: 10%;
+  min-height: 200vh;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 80%;
+          flex: 1 1 80%;
+  display: -ms-grid;
+  display: grid;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  height: 100%;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  -ms-grid-rows: (1fr)[6];
+      grid-template-rows: repeat(6, 1fr);
+  grid-gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.grid-content-item {
+  background: #f96855;
+  color: #353535;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2px;
+  font-size: 1.8rem;
+}
+
+.grid-content-item.small-square {
+  grid-row: span 3;
+  grid-row: span 2;
+}
+
+.grid-content-item.medium-square {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+.grid-content-item.large-square {
+  grid-row: span 2;
+  grid-column: span 4;
+}
+
+.grid-content-item.half-square {
+  grid-row: span 2;
+  grid-column: span 3;
+}
+
+.one {
+  background-color: #f4f4ed;
+}
+
+.two {
+  background-image: url(/images/online-therapy.jpg);
+  background-size: cover;
+  background-color: #353535;
+  background-blend-mode: overlay;
+  color: #c4c4c4;
+}
+
+.three {
+  background-image: url(/images/maggieTherapistPicture.JPG);
+  background-position: 50% 15%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.four {
+  background-color: #746685;
+  color: #fff;
+}
+
+.five {
+  background-image: url(/images/can-do.jpg);
+  background-size: cover;
+  background-color: #353535;
+  background-blend-mode: overlay;
+  color: #c4c4c4;
+}
+
+.six {
+  background-image: url(/images/individual-therapy.jpg);
+  background-size: cover;
+  background-color: #353535;
+  background-blend-mode: overlay;
+  color: #c4c4c4;
+}
+
+.seven {
+  background-image: url(/images/group-therapy.jpg);
+  background-size: cover;
+  background-color: #353535;
+  background-blend-mode: overlay;
+  color: #c4c4c4;
+}
+
+/*Poem Code starts here*/
+.poem-wrapper {
+  position: relative;
+  background-color: #f4f4ed;
+  padding: 5% 10%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-clip-path: polygon(0 0, 100% 8%, 100% 99%, 0% 100%);
+          clip-path: polygon(0 0, 100% 8%, 100% 99%, 0% 100%);
+}
+
+.poem-content h1 {
+  font-size: 7rem;
+  font-weight: 300;
+  padding-bottom: 1rem;
+  margin-left: -4rem;
+}
+
+.poem-content p {
+  font-size: 1.8rem;
+}
+
+/*Poem Code end here*/
 @media screen and (max-width: 1024px) {
   .nav-links {
     width: 60%;

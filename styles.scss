@@ -12,11 +12,21 @@
 //Colors
 $white: #fff;
 $black: #111;
+$charcoal: #353535;
 $dark-grey: #212121;
 $havelock-blue: #89caf3;
+$orange: #f96855;
+$pampas: #f4f4ed;
+$gray: #4f4f4f;
+$medium-gray: #737373;
+$light-gray: #c4c4c4;
+$rum-purple: #746685;
+$black: #353535;
 
 $bold: 500;
 $thin: 300;
+$fontLight: 300;
+$fontBold: 700;
 
 // Z indexes
 nav {
@@ -156,6 +166,138 @@ nav {
 #grid {
   height: 200vh;
 }
+
+//Grid Content code starts here
+.grid-content {
+  padding: 10%;
+  min-height: 200vh;
+  flex: 1 1 80%;
+  display: grid;
+}
+
+.grid {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 20px;
+  justify-content: center;
+}
+
+.grid-content-item {
+  background: $orange;
+  color: $black;
+  font-weight: $fontBold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  font-size: 1.8rem;
+
+  &.small-square {
+    grid-row: span 3;
+    grid-row: span 2;
+  }
+
+  &.medium-square {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+
+  &.large-square {
+    grid-row: span 2;
+    grid-column: span 4;
+  }
+
+  &.half-square {
+    grid-row: span 2;
+    grid-column: span 3;
+  }
+}
+
+// Code for the apperance of each grid-box starts here
+.one {
+  background-color: $pampas;
+}
+
+.two {
+  background-image: url(/images/online-therapy.jpg);
+  background-size: cover;
+  background-color: $charcoal;
+  background-blend-mode: overlay;
+  color: $light-gray;
+}
+
+.three {
+  background-image: url(/images/maggieTherapistPicture.JPG);
+  background-position: 50% 15%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.four {
+  background-color: $rum-purple;
+  color: $white;
+}
+
+.five {
+  background-image: url(/images/can-do.jpg);
+  background-size: cover;
+  background-color: $charcoal;
+  background-blend-mode: overlay;
+  color: $light-gray;
+  // color: $white;
+}
+
+.six {
+  background-image: url(/images/individual-therapy.jpg);
+  background-size: cover;
+  background-color: $charcoal;
+  background-blend-mode: overlay;
+  color: $light-gray;
+  // color: $white;
+}
+
+.seven {
+  background-image: url(/images/group-therapy.jpg);
+  background-size: cover;
+  background-color: $charcoal;
+  background-blend-mode: overlay;
+  color: $light-gray;
+  // color: $white;
+}
+//Grid Content code ends
+
+/*Poem Code starts here*/
+.poem-wrapper {
+  position: relative;
+  background-color: $pampas;
+  padding: 5% 10%;
+  justify-content: center;
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  clip-path: polygon(0 0, 100% 8%, 100% 99%, 0% 100%);
+}
+
+.poem-content h1 {
+  font-size: 7rem;
+  font-weight: $fontLight;
+  padding-bottom: 1rem;
+  margin-left: -4rem;
+}
+
+.poem-content p {
+  font-size: 1.8rem;
+}
+
+// .poem-picture img {
+//   position: absolute;
+//   z-index: -5;
+//   top: 50%;
+//   left: 10%;
+// }
+/*Poem Code end here*/
 
 // Media Queries
 @media screen and (max-width: 1024px) {
