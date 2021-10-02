@@ -151,6 +151,26 @@ nav {
   position: relative;
 }
 
+.hero-text-content h2 {
+  font-size: 6em;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1em;
+}
+
+.hero-text-content h3 {
+  font-size: 5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1em;
+}
+
+.hero-text-content p {
+  font-size: 1.6em;
+  margin: 2rem 0;
+  font-weight: 300;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -222,6 +242,14 @@ nav {
 .grid-content-item.half-square {
   grid-row: span 2;
   grid-column: span 3;
+}
+
+.grid-item-text h1 {
+  font-size: 3em;
+}
+
+.grid-item-text p {
+  font-size: 1.4em;
 }
 
 .one {

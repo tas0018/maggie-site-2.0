@@ -153,6 +153,27 @@ nav {
 
 .hero-text-content {
   position: relative;
+
+
+  h2 {
+    font-size: 6em;
+    font-weight: $fontBold;
+    text-transform: uppercase;
+    line-height: 1em;
+  }
+
+  h3 {
+    font-size: 5em;
+    font-weight: $fontBold;
+    text-transform: uppercase;
+    line-height: 1em;
+  }
+
+  p {
+    font-size: 1.6em;
+    margin: 2rem 0;
+    font-weight: $fontLight;
+  }
 }
 
 .overlay {
@@ -212,6 +233,16 @@ nav {
   &.half-square {
     grid-row: span 2;
     grid-column: span 3;
+  }
+}
+
+.grid-item-text {
+  h1 {
+    font-size: 3em;
+  }
+
+  p {
+    font-size: 1.4em;
   }
 }
 
