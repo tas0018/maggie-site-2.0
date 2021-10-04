@@ -154,7 +154,6 @@ nav {
 .hero-text-content {
   position: relative;
 
-
   h2 {
     font-size: 6em;
     font-weight: $fontBold;
@@ -173,6 +172,24 @@ nav {
     font-size: 1.6em;
     margin: 2rem 0;
     font-weight: $fontLight;
+  }
+
+  a {
+    display: inline-block;
+    font-size: 1.3em;
+    background: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: #111;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.2s;
+    border-radius: 2px;
+  }
+
+  a:hover {
+    letter-spacing: 6px;
   }
 }
 
