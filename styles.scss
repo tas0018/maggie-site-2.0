@@ -339,13 +339,29 @@ nav {
   font-size: 1.8rem;
 }
 
-// .poem-picture img {
-//   position: absolute;
-//   z-index: -5;
-//   top: 50%;
-//   left: 10%;
-// }
 /*Poem Code end here*/
+
+/*Meet Maggie Page Start*/
+#meet-maggie-hero {
+  width: 100%;
+  min-height: 100vh;
+  //display: flex;
+  position: relative;
+  background-image: url(./images/temp-dog-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meet-maggie-headline h1 {
+  font-size: 6em;
+  color: $havelock-blue;
+}
+
+/*Meet Maggie Page End*/
 
 // Media Queries
 @media screen and (max-width: 1024px) {
