@@ -373,6 +373,93 @@ nav {
   color: #89caf3;
 }
 
+#maggie-info {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.maggie-info-container {
+  height: inherit;
+  width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.meet-maggie-text-container,
+.meet-maggie-img-container {
+  width: 50%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.meet-maggie-img-container {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.meet-maggie-text-container {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.meet-maggie-img-container img {
+  max-width: 55%;
+  height: auto;
+  max-height: 80%;
+  margin-right: -5%;
+}
+
+.quote-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  height: 60%;
+  background-color: #89caf3;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  opacity: 80%;
+  margin-left: -5%;
+}
+
+.quote-box h1 {
+  padding: 10%;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.quote-box h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+#meet-maggie-specializations {
+  width: 100%;
+  height: 60vh;
+  background-color: #ebebeb;
+}
+
 /*Meet Maggie Page End*/
 @media screen and (max-width: 1024px) {
   .nav-links {
